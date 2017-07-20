@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class TimeReaderService {
 
   constructor() { 
-    this.remainingSeconds = 1800;
+    this.remainingSeconds = 28800;
   }
 
   remainingSeconds: number;

@@ -19,7 +19,7 @@ export class TimerComponent implements OnInit {
   constructor(private timeService: TimeReaderService) { }
 
   ngOnInit() {
-    this.timer = TimerObservable.create(this.timeService.remainingSeconds, 1000);
+    this.timer = TimerObservable.create(0, 1000);
     this.start();
   }
 
@@ -33,7 +33,7 @@ export class TimerComponent implements OnInit {
 
   stop(){
     this.subscription.unsubscribe();
-    this.timeService.remainingSeconds = this.timeService.remainingSeconds - this.currentSpan - 1;
+    this.timeService.remainingSeconds = this.timeService.remainingSeconds - this.currentSpan;
     this.started = false;
   }
 }
