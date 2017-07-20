@@ -1,0 +1,3 @@
+<div class="timer">{{ remainingTime | date:'HH:mm:ss' }}</div>
+<button (click)="start()" *ngIf="!started">Start</button>
+<button (click)="stop()" *ngIf="started">Stop</button>
