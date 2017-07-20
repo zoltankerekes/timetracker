@@ -1,3 +1,11 @@
-<div class="timer">{{ remainingTime | date:'HH:mm:ss' }}</div>
-<button (click)="start()" *ngIf="!isStarted">Start</button>
-<button (click)="stop()" *ngIf="isStarted">Stop</button>
+
+    <div>
+        <div class="pie degree" [ngStyle]="{ 'background-image': backgroundImage }">
+        <span class="block"></span>
+        <span id="time">{{ remainingTime | date:'HH:mm:ss' }}</span>
+        <div class="time-btn">
+            <button class="btn btn-primary" (click)="start()" *ngIf="!isStarted">Start</button>
+            <button class="btn btn-primary" (click)="stop()" *ngIf="isStarted">Stop</button>
+        </div>
+    </div>
+

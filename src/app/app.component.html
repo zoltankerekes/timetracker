@@ -1,11 +1,19 @@
-<div style="text-align:center">
-  <app-countdowntimer></app-countdowntimer>
-</div>
-
-<div style="text-align:center">
-  <app-timer activityName="Lunch"></app-timer>
-</div>
-
-<div style="text-align:center">
-  <app-timer activityName="Cigarette"></app-timer>
+<app-header></app-header>
+<div class="container">
+  <div class="row row-eq-height">
+    <div class="col-md-3">
+      <app-timer></app-timer>
+    </div>
+    <div class="col-md-5">
+      <app-countdowntimer activityName="Work"></app-countdowntimer>
+    </div>
+    <div class="col-md-3">
+      <app-activities></app-activities>
+    </div>
+  </div>
+  <div class="row">
+    <div style="text-align:center">
+      <app-log></app-log>
+    </div>
+  </div>
 </div>

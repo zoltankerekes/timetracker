@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <thead>
+    <td>Start</td>
+    <td>End</td>
+    <td>Activity</td>
+    <td>Duration</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let log of logs">
+      <td>{{ log.startDate | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+      <td>{{ log.endDate | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+      <td>{{ log.activityName }}</td>
+      <td>{{ log.duration | date:'HH:mm:ss' }}</td>
+    </tr>
+  </tbody>
+</table>

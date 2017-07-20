@@ -1,3 +1,6 @@
-<div class="timer">{{ remainingTime | date:'HH:mm:ss' }}</div>
-<button (click)="start()" *ngIf="!isStarted">{{ activityName }}</button>
-<button (click)="stop()" *ngIf="isStarted">Stop</button>
+<div class="pie degree" [style.display]="isStarted ? 'inherit' : 'none'">
+    <div class="activity-name">{{ activityName }}</div>
+    <span class="block"></span>
+    <span id="time">{{ elapsedTime | date:'HH:mm:ss' }}</span>
+</div>
+

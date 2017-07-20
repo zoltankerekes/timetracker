@@ -1,0 +1,13 @@
+<div class="form-group">
+  <label for="activityName">Add new activity</label>
+  <input class="form-control" type="text" id="activityName" [(ngModel)]="activityName">
+</div>
+  <button class="btn btn-default" (click)="addNewActivity()">Add activity</button>
+<br>
+<hr>
+<div *ngFor="let activity of activities">
+<p>
+      <button class="btn btn-primary" (click)="start(activity)" *ngIf="!activity.isStarted">Start {{ activity.name }}</button>
+      <button class="btn btn-warning" (click)="stop(activity)" *ngIf="activity.isStarted">Stop {{ activity.name }}</button>
+</p>
+</div>
